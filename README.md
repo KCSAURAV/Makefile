@@ -1,5 +1,6 @@
 # Makefile .....
 General use of makefile. These are demos to help with make commands.
+Makefiles are traditionally named either "makefile" or "Makefile". We can re-use makefile/ modify it to our needs. However, makefiles are very particular about whitespace.
 
 RUNNING MAKE
 
@@ -8,6 +9,13 @@ in it. If it is not one of the standard names described above you can use the
 -f option to the make command. If the makefile is named MAKEFILE, you would type
 
     make -f MAKEFILE // Use name "MAKEFILE"
+    
+    grep 
+    find . -name 'Makefile' // to use that name instead. 
+
+If you do not want make to do anything but just want to see what make might do, use the -n option, which does not execute any commands but just displays which ones it would do:
+
+    make -n
 
 NOTES:
 
@@ -63,14 +71,7 @@ Makefile will create variables or use them
 
     all: $(EXEC)
 
-    grep 
-    find . -name 'Makefile'
-
-to use that instead. If you do not want make to do anything but just want to
-see what make might do, use the -n option, which does not execute any commands
-but just displays which ones it would do:
-
-    make -n
+    
 
 There are many other things to know about running make, but these two flags
 are useful to remember as you progress through the lessons.
