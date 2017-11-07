@@ -70,7 +70,7 @@ tar: *.c *.h
    -czf -> compress the files in the directory, 
    rm -> removes the demodir
 
-Makefile will create variables or use them
+Makefile will create variables or use them if already present...
 
     all: $(EXEC)
 
