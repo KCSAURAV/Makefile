@@ -9,18 +9,20 @@ in it. If it is not one of the standard names described above you can use the
 
     make -f MAKEFILE // Use name "MAKEFILE"
 
+NOTES:
+
 Touch will create an empty file without modification in compiling
 Or if it already has a file it will update
 
-touch dummyfile // will create it
+    touch dummyfile // will also create it
 
 rm dummyfile
 
-rm *.o //will delete all .o files
+rm *.o // will delete all .o files
 
-make main.o //will only create make.o
+make main.o // will only create make.o
 
-else make command will compile the first object demo.
+else make command will compile the first object demo
 
 make clean // will delete object files
 
@@ -29,8 +31,8 @@ make clean // will delete object files
 clean:
     \rm *.o
     
-      ^
-      |
+        ^
+        |
 
 Give an unaliased version of the file
 
@@ -40,12 +42,14 @@ install: demo
     touch install
 
 install2: demo
-        if [ ! -d ../bin ] ; then mkdir ../bin ; fi //if bin does not exist create a dir /bin
-        \cp demo ../bin
-        touch install2
+
+    if [ ! -d ../bin ] ; then mkdir ../bin ; fi //if bin does not exist create a dir /bin
+    \cp demo ../bin
+    touch install2
 
 tar: *.c *.h
-if [ ! -d demodir ] ; then mkdir demodir ; fi
+    
+    if [ ! -d demodir ] ; then mkdir demodir ; fi
         ln -f Makefile *.c *.h demodir/
         tar -czf demo.tar.gz demodir
         rm -rf demodir
@@ -77,6 +81,5 @@ are useful to remember as you progress through the lessons.
 
 Lastly, the makefile in this top-level directory is the LAST part of this 
 tutorial. You will not understand it until you have finished the tutorial.
-Save it for last. (I know you won't, but I am obliged to say so anyway.)
-
+Save it for last :)
 
