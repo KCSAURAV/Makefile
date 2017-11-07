@@ -66,7 +66,7 @@ tar: *.c *.h
         tar -czf demo.tar.gz demodir
         rm -rf demodir
 
-/*  ln - > create links
+   /*ln - > create links
     -czf -> compress the files in the directory
     rm -> removes the demodir */
 
