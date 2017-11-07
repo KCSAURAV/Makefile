@@ -2,6 +2,7 @@
 General use of makefile. These are demos to help with make commands.
 
 RUNNING MAKE
+
 To run the make command, make sure your working directory has a makefile 
 in it. If it is not one of the standard names described above you can use the 
 -f option to the make command. If the makefile is named MAKEFILE, you would type
@@ -12,11 +13,13 @@ Touch will create an empty file without modification in compiling
 Or if it already has a file it will update
 
 touch dummyfile // will create it
+
 rm dummyfile
 
 rm *.o //will delete all .o files
 
 make main.o //will only create make.o
+
 else make command will compile the first object demo.
 
 make clean // will delete object files
@@ -25,12 +28,14 @@ make clean // will delete object files
 
 clean:
     \rm *.o
-    ^
-    |
+    
+      ^
+      |
 
 Give an unaliased version of the file
 
 install: demo
+
     \cp demo ../bin   -> will create a copy of demo and name it install and puts it in dir /bin
     touch install
 
@@ -38,9 +43,6 @@ install2: demo
         if [ ! -d ../bin ] ; then mkdir ../bin ; fi //if bin does not exist create a dir /bin
         \cp demo ../bin
         touch install2
-
-
-
 
 tar: *.c *.h
 if [ ! -d demodir ] ; then mkdir demodir ; fi
