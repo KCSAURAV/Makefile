@@ -2,7 +2,8 @@
 General use of makefile. These are demos to help with make commands.
 Makefiles are traditionally named either "makefile" or "Makefile". We can re-use makefile/ modify it to our needs. 
 However, makefiles are very particular about whitespace. It prefers TABS as separators. It gives self - explanatory error:
-*** missing separator (did you mean TAB instead of 8 spaces?).  Stop.
+
+    *** missing separator (did you mean TAB instead of 8 spaces?).  Stop.
 
 RUNNING MAKE
 
