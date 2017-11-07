@@ -1,6 +1,8 @@
 # Makefile .....
 General use of makefile. These are demos to help with make commands.
-Makefiles are traditionally named either "makefile" or "Makefile". We can re-use makefile/ modify it to our needs. However, makefiles are very particular about whitespace.
+Makefiles are traditionally named either "makefile" or "Makefile". We can re-use makefile/ modify it to our needs. 
+However, makefiles are very particular about whitespace. It prefers TABS as separators. It gives self - explanatory error:
+*** missing separator (did you mean TAB instead of 8 spaces?).  Stop.
 
 RUNNING MAKE
 
@@ -13,7 +15,8 @@ in it. If it is not one of the standard names described above you can use the
     grep 
     find . -name 'Makefile' // to use that name instead. 
 
-If you do not want make to do anything but just want to see what make might do, use the -n option, which does not execute any commands but just displays which ones it would do:
+
+There are many other things to know about running make. If you do not want make to do anything but just want to see what make might do, use the -n option, which does not execute any commands but just displays which ones it would do:
 
     make -n
 
@@ -61,23 +64,14 @@ tar: *.c *.h
         tar -czf demo.tar.gz demodir
         rm -rf demodir
 
-
-    ln - > create links
-    -czf ->compress the files in the directory
-    rm -> removes the demodir
-
+/*  ln - > create links
+    -czf -> compress the files in the directory
+    rm -> removes the demodir */
 
 Makefile will create variables or use them
 
     all: $(EXEC)
 
-    
-
-There are many other things to know about running make, but these two flags
-are useful to remember as you progress through the lessons.
-
 Lastly, the makefile in this top-level directory is the LAST part of this 
 tutorial. You will not understand it until you have finished the tutorial.
 Save it for last :)
-
-More on GNU Make manual : Steward Weiss website
