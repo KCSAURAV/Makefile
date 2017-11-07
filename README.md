@@ -1,4 +1,4 @@
-# Makefile
+# Makefile .....
 General use of makefile. These are demos to help with make commands.
 
 RUNNING MAKE
@@ -16,19 +16,18 @@ Or if it already has a file it will update
 
     touch dummyfile // will also create it
 
-rm dummyfile
+    rm dummyfile
 
-rm *.o // will delete all .o files
+    rm *.o // will delete all .o files
 
-make main.o // will only create make.o
-
-else make command will compile the first object demo
-
-make clean // will delete object files
-
-.PHONY: clean // will not create clean file but runs .Tells make that it is a fake target
+    make main.o // will only create make.o else make command will compile the first object demo
 
 clean:
+
+    make clean // will delete object files
+
+    .PHONY: clean // will not create clean file but runs .Tells make that it is a fake target
+
     \rm *.o
     
         ^
@@ -55,20 +54,17 @@ tar: *.c *.h
         rm -rf demodir
 
 
-ln - > create links
--czf ->compress the files in the directory
-
-rm -> removes the demodir
+    ln - > create links
+    -czf ->compress the files in the directory
+    rm -> removes the demodir
 
 
 Makefile will create variables or use them
 
-all: $(EXEC)
+    all: $(EXEC)
 
-
-
-grep 
-find . -name 'Makefile'
+    grep 
+    find . -name 'Makefile'
 
 to use that instead. If you do not want make to do anything but just want to
 see what make might do, use the -n option, which does not execute any commands
@@ -83,3 +79,4 @@ Lastly, the makefile in this top-level directory is the LAST part of this
 tutorial. You will not understand it until you have finished the tutorial.
 Save it for last :)
 
+More on GNU Make manual : Steward Weiss website
