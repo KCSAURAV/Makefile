@@ -1,0 +1,56 @@
+touch will create an empty file without modification in compiling
+Or if it already has a file it will update
+
+touch dummyfile // will create it
+rm dummyfile
+
+rm *.o //will delete all .o files
+
+make main.o //will only create make.o
+else make command will compile the first object demo.
+
+
+make clean // will delete object files
+
+.PHONY: clean // will not create clean file but runs .Tells make that it is a fake target
+
+clean:
+    \rm *.o
+    ^
+    |
+
+Give an unaliased version of the file
+
+install: demo
+    \cp demo ../bin   -> will create a copy of demo and name it install and puts it in dir /bin
+    touch install
+
+install2: demo
+        if [ ! -d ../bin ] ; then mkdir ../bin ; fi //if bin does not exist create a dir /bin
+        \cp demo ../bin
+        touch install2
+
+
+
+
+tar: *.c *.h
+if [ ! -d demodir ] ; then mkdir demodir ; fi
+        ln -f Makefile *.c *.h demodir/
+        tar -czf demo.tar.gz demodir
+        rm -rf demodir
+
+
+ln - > create links
+-czf ->compress the files in the directory
+
+rm -> removes the demodir
+
+
+Makefile will create variables or use them
+
+
+all: $(EXEC)
+
+GNU Make manual : Steward Weiss website
+
+
