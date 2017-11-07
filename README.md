@@ -66,8 +66,8 @@ tar: *.c *.h
         tar -czf demo.tar.gz demodir
         rm -rf demodir
 
-   ln - > create links
-   -czf -> compress the files in the directory
+   ln - > create links, 
+   -czf -> compress the files in the directory, 
    rm -> removes the demodir
 
 Makefile will create variables or use them
